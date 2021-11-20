@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#293462"
+    android:background="@color/background_blue"
     tools:context=".InicioFragment">
 
 
@@ -27,8 +27,8 @@
         android:layout_height="70dp"
         android:layout_marginHorizontal="@dimen/defaultMargin"
         android:layout_marginVertical="30dp"
-        android:backgroundTint="#F7BE16"
-        android:text="LOGIN"
+        android:backgroundTint="@color/yellow"
+        android:text="@string/login"
         app:layout_constraintBottom_toTopOf="@+id/SingIn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +41,7 @@
         android:layout_height="70dp"
         android:layout_marginHorizontal="@dimen/defaultMargin"
         android:layout_marginVertical="150dp"
-        android:backgroundTint="#F7BE16"
+        android:backgroundTint="@color/yellow"
         android:text="SING IN"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
