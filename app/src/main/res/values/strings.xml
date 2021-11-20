@@ -16,4 +16,5 @@
     <string name="email_label">Enter you email address</string>
     <string name="password_label">Enter your password</string>
     <string name="login">LOGIN</string>
+    <string name="sing_up">Sing Up</string>
 </resources>

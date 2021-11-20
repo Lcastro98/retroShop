@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginFragment">
+    tools:context=".SingUpFragment">
 
     <ImageView
         android:id="@+id/logo"
@@ -14,23 +14,59 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/login_email_layout"
         android:layout_marginVertical="70dp"
         android:src="@drawable/logo"
-        tools:ignore="ContentDescription"
-        />
+        tools:ignore="ContentDescription" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/login_email_layout"
+        android:id="@+id/singup_firstname_layout"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/singup_lastname_layout"
+        app:layout_constraintBottom_toTopOf="@id/singup_email_layout"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginVertical="30dp"
+        android:hint="First Name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/singup_lastname_layout"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/singup_firstname_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintBottom_toTopOf="@id/singup_email_layout"
+        android:layout_marginVertical="30dp"
+
+        android:hint="Last Name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/singup_email_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
         android:layout_marginHorizontal="@dimen/defaultMargin"
-        app:layout_constraintBottom_toTopOf="@id/login_password_layout"
+        app:layout_constraintBottom_toTopOf="@id/singup_password_layout"
         app:layout_constraintVertical_chainStyle="packed"
-        android:hint="@string/email_label">
+        android:layout_marginVertical="30dp"
+        android:hint="Email">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -40,27 +76,18 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/defaultMargin"
-        android:text="Email"
-        app:layout_constraintBottom_toTopOf="@+id/login_email_layout"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/login_password_layout"
+        android:id="@+id/singup_password_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_email_layout"
-        app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
         android:layout_marginHorizontal="@dimen/defaultMargin"
-        android:layout_marginVertical="@dimen/defaultMargin"
-        app:endIconMode="password_toggle"
-        android:hint="@string/password_label">
+        app:layout_constraintBottom_toTopOf="@id/buttonSingUp"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginVertical="20dp"
+
+        android:hint="Password">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -69,32 +96,14 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:text="Password"
-        app:layout_constraintBottom_toTopOf="@+id/login_password_layout"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/forgot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="50dp"
-        android:text="Forgot your password?"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_password_layout" />
-
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonLogin"
+        android:id="@+id/buttonSingUp"
         android:layout_width="316dp"
         android:layout_height="70dp"
         android:layout_marginHorizontal="@dimen/defaultMargin"
         android:layout_marginBottom="150dp"
         android:backgroundTint="@color/dark_blue"
-        android:text="@string/login"
+        android:text="@string/sing_up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
