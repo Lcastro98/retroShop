@@ -23,7 +23,9 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.RetroShop.NoActionBar" />
+            android:theme="@style/Theme.RetroShop.NoActionBar">
+        </activity>
+
     </application>
 
 </manifest>

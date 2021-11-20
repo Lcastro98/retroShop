@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#293462"
     tools:context=".InicioFragment">
+
 
     <ImageView
         android:id="@+id/logo2"
         android:layout_width="match_parent"
         android:layout_height="154dp"
+        android:layout_marginVertical="136dp"
+        android:layout_marginStart="@dimen/defaultMargin"
+        android:layout_marginEnd="@dimen/defaultMargin"
+        android:src="@drawable/shop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="@dimen/defaultMargin"
-        android:layout_marginVertical="136dp"
-        android:layout_marginEnd="@dimen/defaultMargin"
-        android:src="@drawable/shop"
-        />
+        tools:ignore="ContentDescription" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/Login"
@@ -26,6 +27,7 @@
         android:layout_height="70dp"
         android:layout_marginHorizontal="@dimen/defaultMargin"
         android:layout_marginVertical="30dp"
+        android:backgroundTint="#F7BE16"
         android:text="LOGIN"
         app:layout_constraintBottom_toTopOf="@+id/SingIn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,13 +41,13 @@
         android:layout_height="70dp"
         android:layout_marginHorizontal="@dimen/defaultMargin"
         android:layout_marginVertical="150dp"
+        android:backgroundTint="#F7BE16"
         android:text="SING IN"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
     </com.google.android.material.button.MaterialButton>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
