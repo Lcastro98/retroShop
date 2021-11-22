@@ -6,15 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.misionTIC.retroshop.databinding.FragmentInicioBinding
+import com.misionTIC.retroshop.databinding.FragmentSignUpBinding
 
 /**
  * A simple [Fragment] subclass.
- * Use the [InicioFragment.newInstance] factory method to
+ * Use the [SignUpFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class InicioFragment : Fragment() {
-    private var _binding: FragmentInicioBinding? = null
+class SignUpFragment : Fragment() {
+
+    private var _binding: FragmentSignUpBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,21 +26,16 @@ class InicioFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentInicioBinding.inflate(inflater, container, false)
+        _binding = FragmentSignUpBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.Login.setOnClickListener {
-            findNavController().navigate(R.id.action_inicioFragment_to_loginFragment)
+        binding.buttonSignUp.setOnClickListener {
+            findNavController().navigate(R.id.action_singUpFragment_to_loginFragment)
         }
-
-        binding.SignUp.setOnClickListener {
-            findNavController().navigate(R.id.action_inicioFragment_to_singUpFragment)
-        }
-
     }
 
 }
