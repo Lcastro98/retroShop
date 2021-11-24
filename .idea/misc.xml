@@ -12,9 +12,15 @@
         <entry key="..\:/Users/felix/AndroidStudioProjects/retroShop/app/src/main/res/layout/fragment_login.xml" value="0.2" />
         <entry key="..\:/Users/felix/AndroidStudioProjects/retroShop/app/src/main/res/layout/fragment_sign_up.xml" value="0.20018115942028986" />
         <entry key="..\:/Users/felix/AndroidStudioProjects/retroShop/app/src/main/res/layout/fragment_sing_up.xml" value="0.25" />
+        <entry key="..\:/Users/lcast/StudioProjects/retroShop/app/src/main/res/drawable/ic_home_24.xml" value="0.19427083333333334" />
+        <entry key="..\:/Users/lcast/StudioProjects/retroShop/app/src/main/res/drawable/ic_product_24.xml" value="0.19427083333333334" />
+        <entry key="..\:/Users/lcast/StudioProjects/retroShop/app/src/main/res/layout/content_home.xml" value="0.13269927536231885" />
+        <entry key="..\:/Users/lcast/StudioProjects/retroShop/app/src/main/res/layout/fragment_comment.xml" value="0.1585612968591692" />
+        <entry key="..\:/Users/lcast/StudioProjects/retroShop/app/src/main/res/layout/fragment_home.xml" value="0.13269927536231885" />
+        <entry key="..\:/Users/lcast/StudioProjects/retroShop/app/src/main/res/layout/fragment_product.xml" value="0.13269927536231885" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>

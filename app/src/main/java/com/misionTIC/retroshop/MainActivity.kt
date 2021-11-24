@@ -1,19 +1,20 @@
 package com.misionTIC.retroshop
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
+import android.util.Log
+//import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
+//import androidx.navigation.findNavController
+//import androidx.navigation.ui.AppBarConfiguration
+//import androidx.navigation.ui.navigateUp
+//import androidx.navigation.ui.setupActionBarWithNavController
+//import android.view.Menu
+//import android.view.MenuItem
 import com.misionTIC.retroshop.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
+//    private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,9 +51,35 @@ class MainActivity : AppCompatActivity() {
 //        }
 //    }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        return navController.navigateUp(appBarConfiguration)
-                || super.onSupportNavigateUp()
-    }
+        override fun onStart() {
+            super.onStart()
+            Log.d("ACTIVITY", "onStart Called")
+        }
+
+        override fun onResume() {
+            super.onResume()
+            Log.d("ACTIVITY", "onResume Called")
+        }
+
+        override fun onPause() {
+            super.onPause()
+            Log.d("ACTIVITY", "onPause Called")
+        }
+
+        override fun onStop() {
+            super.onStop()
+            Log.d("ACTIVITY", "onStop Called")
+        }
+
+        override fun onDestroy() {
+            super.onDestroy()
+            Log.d("ACTIVITY", "onDestroy Called")
+        }
+
+//    override fun onSupportNavigateUp(): Boolean {
+//        val navController = findNavController(R.id.nav_host_fragment_content_main)
+//        return navController.navigateUp(appBarConfiguration)
+//                || super.onSupportNavigateUp()
+//    }
+
 }

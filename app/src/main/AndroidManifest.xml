@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RetroShop">
         <activity
+            android:name=".HomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.RetroShop.NoActionBar"/>
+        <activity
             android:name=".SplashActivity"
             android:exported="true"
-            android:theme="@style/Theme.RetroShop.NoActionBar" >
+            android:theme="@style/Theme.RetroShop.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,9 +27,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.RetroShop.NoActionBar">
-        </activity>
-
+            android:theme="@style/Theme.RetroShop.NoActionBar"></activity>
     </application>
 
 </manifest>
