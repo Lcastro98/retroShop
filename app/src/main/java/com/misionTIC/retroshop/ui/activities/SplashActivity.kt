@@ -1,4 +1,4 @@
-package com.misionTIC.retroshop
+package com.misionTIC.retroshop.ui.activities
 
 import android.animation.Animator
 import android.content.Intent

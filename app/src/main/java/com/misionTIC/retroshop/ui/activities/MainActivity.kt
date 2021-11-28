@@ -1,4 +1,4 @@
-package com.misionTIC.retroshop
+package com.misionTIC.retroshop.ui.activities
 
 import android.os.Bundle
 import android.util.Log

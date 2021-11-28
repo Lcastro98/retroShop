@@ -1,4 +1,4 @@
-package com.misionTIC.retroshop
+package com.misionTIC.retroshop.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.misionTIC.retroshop.R
 import com.misionTIC.retroshop.databinding.FragmentInicioBinding
 
 /**

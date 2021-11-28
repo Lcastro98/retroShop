@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.misionTIC.retroshop.LoginFragment"
+        android:name="com.misionTIC.retroshop.ui.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
     <fragment
         android:id="@+id/inicioFragment"
-        android:name="com.misionTIC.retroshop.InicioFragment"
+        android:name="com.misionTIC.retroshop.ui.fragments.InicioFragment"
         android:label="fragment_inicio"
         tools:layout="@layout/fragment_inicio" >
         <action
@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/singUpFragment"
-        android:name="com.misionTIC.retroshop.SignUpFragment"
+        android:name="com.misionTIC.retroshop.ui.fragments.SignUpFragment"
         android:label="fragment_sing_up"
         tools:layout="@layout/fragment_sign_up" >
         <action

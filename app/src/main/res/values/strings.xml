@@ -10,4 +10,13 @@
     <string name="password_label">Enter your password</string>
     <string name="login">LOGIN</string>
     <string name="sign_up">SIGN UP</string>
+    <string name="home_label">Home</string>
+    <string name="product_label">Productos</string>
+    <string name="comment_label">Comentarios</string>
+    <string name="profile_label">Perfil</string>
+
+    <string name="home_title">¿Quienes Somos?</string>
+    <string name="product_title">Nuestros Productos</string>
+    <string name="comment_title">Comentarios</string>
+    <string name="profile_title">Mi Perfil</string>
 </resources>

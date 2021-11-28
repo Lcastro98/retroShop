@@ -1,22 +1,21 @@
-package com.misionTIC.retroshop
+package com.misionTIC.retroshop.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.misionTIC.retroshop.databinding.FragmentHomeBinding
-import com.misionTIC.retroshop.databinding.FragmentProfileBinding
+import com.misionTIC.retroshop.databinding.FragmentProductBinding
 
 
 /**
  * A simple [Fragment] subclass.
- * Use the [ProfileFragment.newInstance] factory method to
+ * Use the [ProductFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class ProfileFragment : Fragment() {
+class ProductFragment : Fragment() {
 
-    private var _binding: FragmentProfileBinding? = null
+    private var _binding: FragmentProductBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -24,7 +23,9 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentProfileBinding.inflate(inflater, container, false)
+        _binding = FragmentProductBinding.inflate(inflater, container, false)
         return binding.root
     }
+
+
 }

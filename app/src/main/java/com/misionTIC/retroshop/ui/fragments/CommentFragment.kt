@@ -1,10 +1,11 @@
-package com.misionTIC.retroshop
+package com.misionTIC.retroshop.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.misionTIC.retroshop.R
 import com.misionTIC.retroshop.databinding.FragmentCommentBinding
 
 
@@ -14,6 +15,7 @@ import com.misionTIC.retroshop.databinding.FragmentCommentBinding
  * create an instance of this fragment.
  */
 class CommentFragment : Fragment() {
+
     private var _binding: FragmentCommentBinding? = null
     private val binding get() = _binding!!
 
