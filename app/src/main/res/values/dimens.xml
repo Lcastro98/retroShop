@@ -8,4 +8,5 @@
     <dimen name="icon_size">54dp</dimen>
     <dimen name="subtitle_size">18sp</dimen>
     <dimen name="image_size">250dp</dimen>
+    <dimen name="corner_radius_card">8dp</dimen>
 </resources>

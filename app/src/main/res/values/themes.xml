@@ -32,6 +32,13 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="cutCard">
+        <item name="cornerFamilyTopLeft">cut</item>
+        <item name="cornerFamilyTopRight">cut</item>
+        <item name="cornerSizeTopRight">8dp</item>
+        <item name="cornerSizeTopLeft">8dp</item>
+    </style>
+
     <style name="Theme.RetroShop.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.RetroShop.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
