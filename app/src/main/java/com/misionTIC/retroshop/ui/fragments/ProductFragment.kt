@@ -11,8 +11,10 @@ import androidx.navigation.fragment.findNavController
 
 import androidx.recyclerview.widget.GridLayoutManager
 import com.misionTIC.retroshop.R
+import com.misionTIC.retroshop.data.models.Product
 import com.misionTIC.retroshop.databinding.FragmentProductBinding
 import com.misionTIC.retroshop.ui.adapters.ProductAdapter
+import com.misionTIC.retroshop.ui.listeners.OnProductListener
 import com.misionTIC.retroshop.ui.viewmodels.ProductViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
@@ -45,7 +47,7 @@ class ProductFragment : Fragment() {
         productAdapter = ProductAdapter(
             listOf()
         )
-        productAdapter.listener = object: OnProductListener{
+        productAdapter.listener = object: OnProductListener {
             override fun onClick(item: Product){
                 Log.d("PRODUCT", item.name)
                 productViewModel.selectProduct(item)

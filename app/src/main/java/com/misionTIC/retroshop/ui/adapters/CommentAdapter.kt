@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.misionTIC.retroshop.databinding.ItemCommentBinding
+import com.misionTIC.retroshop.data.models.Comment
 
 class CommentAdapter(var items: List<Comment>): RecyclerView.Adapter<CommentAdapter.ViewHolder>(){
     class ViewHolder(val item: ItemCommentBinding): RecyclerView.ViewHolder(item.root)

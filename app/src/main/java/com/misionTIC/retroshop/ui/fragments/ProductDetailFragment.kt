@@ -6,10 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
+import com.bumptech.glide.Glide
 import com.misionTIC.retroshop.R
 import com.misionTIC.retroshop.databinding.FragmentProductDetailBinding
 import com.misionTIC.retroshop.ui.viewmodels.ProductViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
+
 
 
 /**
@@ -48,3 +50,5 @@ class ProductDetailFragment : Fragment() {
     }
 
 }
+
+

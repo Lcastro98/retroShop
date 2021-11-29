@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
 import com.misionTIC.retroshop.databinding.FragmentHomeBinding
-import com.misionTIC.retroshop.databinding.FragmentLoginBinding
 import com.misionTIC.retroshop.ui.viewmodels.StoreViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 

@@ -4,8 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.misionTIC.retroshop.OnProductListener
+import com.misionTIC.retroshop.ui.listeners.OnProductListener
 import com.misionTIC.retroshop.databinding.ItemProductBinding
+import com.misionTIC.retroshop.data.models.Product
+
 
 class ProductAdapter(var items: List<Product>): RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
     class ViewHolder(val item: ItemProductBinding): RecyclerView.ViewHolder(item.root)

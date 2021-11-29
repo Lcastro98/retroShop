@@ -1,4 +1,4 @@
-package com.misionTIC.retroshop.ui.adapters
+package com.misionTIC.retroshop.data.models
 
 data class Comment(
     var id: String,

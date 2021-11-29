@@ -6,6 +6,6 @@ data class StoreInfo(
     var image: String,
     var address: String,
     var description: String,
-    var lat: Double? = null,
-    var lng: Double? = null
+//    var lat: Double? = null,
+//    var lng: Double? = null
 )

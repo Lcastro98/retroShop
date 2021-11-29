@@ -1,10 +1,10 @@
 package com.misionTIC.retroshop.data.repositories
 
 import com.misionTIC.retroshop.data.mockups.CommentMock
-import com.misionTIC.retroshop.ui.adapters.Comment
+import com.misionTIC.retroshop.data.models.Comment
 
 class CommentRepository (private val dataSource: CommentMock){
-    suspend fun loadComment(): List<Comment>{
+    suspend fun loadComments(): List<Comment>{
         return dataSource.loadComments()
     }
 }

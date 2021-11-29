@@ -6,9 +6,9 @@ class StoreInfoMock {
     fun loadInfo(): StoreInfo{
         return StoreInfo(
             "1",
-            "Mi tienda",
+            "RetroShop",
             "https://ingreseunadireccion.com",
-            "calle Falsa 123",
+            "Cra. tal # tal - tal",
             "Vendemos algo"
         )
     }
