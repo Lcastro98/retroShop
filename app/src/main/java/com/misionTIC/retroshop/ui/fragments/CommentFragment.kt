@@ -5,11 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.misionTIC.retroshop.R
 import com.misionTIC.retroshop.databinding.FragmentCommentBinding
-import com.misionTIC.retroshop.ui.adapters.Comment
 import com.misionTIC.retroshop.ui.adapters.CommentAdapter
+import com.misionTIC.retroshop.ui.viewmodels.CommentViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 /**
@@ -21,8 +24,7 @@ class CommentFragment : Fragment() {
 
     private var _binding: FragmentCommentBinding? = null
     private val binding get() = _binding!!
-    private lateinit var commentAdapter: CommentAdapter
-    private lateinit var commentManager: LinearLayoutManager
+    private val commentViewModel: CommentViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,18 +37,21 @@ class CommentFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
+        commentViewModel.loadComments()
         commentAdapter = CommentAdapter(
-            listOf(
-                Comment("1","buen producto", "Fulano", "https://st.depositphotos.com/2069323/2156/i/950/depositphotos_21568785-stock-photo-man-pointing.jpg", "2020-05-01"),
-                Comment("2","buen producto", "Fulano", "https://st.depositphotos.com/2069323/2156/i/950/depositphotos_21568785-stock-photo-man-pointing.jpg", "2021-05-01")
-
-            )
+            listOf()
         )
         commentManager = LinearLayoutManager(requireContext())
-        binding.commentRecycler.apply {
+        binding.commentRecycler.apply{
             adapter = commentAdapter
             layoutManager = commentManager
         }
+        observeViewModels()
+    }
 
+    private fun observeViewModels(){
+        commentViewModel.comments.observe(viewLifecycleOwner, Observer{ comments ->
+            commentAdapter.newDataSet(comments)
+        })
     }
 }
