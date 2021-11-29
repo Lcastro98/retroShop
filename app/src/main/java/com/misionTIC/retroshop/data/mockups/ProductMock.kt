@@ -1,5 +1,7 @@
 package com.misionTIC.retroshop.data.mockups
 
+import com.misionTIC.retroshop.ui.adapters.Product
+
 class ProductMock {
     fun loadProducts(): List<Product>{
         return listOf(

@@ -39,7 +39,7 @@ class ProductDetailFragment : Fragment() {
     }
 
     private fun observeViewModels(){
-        productViewModel.selected.observe(viewLifecycleOwner, Observer{ product->
+        productViewModel.selected.observe(viewLifecycleOwner, Observer{ product ->
             binding.productDetailName.text = product.name
             binding.productDetailPrice.text = product.price
             binding.productDetailDescription.text = product.description

@@ -24,6 +24,8 @@ class CommentFragment : Fragment() {
 
     private var _binding: FragmentCommentBinding? = null
     private val binding get() = _binding!!
+    private lateinit var commentAdapter: CommentAdapter
+    private lateinit var commentManager: LinearLayoutManager
     private val commentViewModel: CommentViewModel by viewModel()
 
     override fun onCreateView(
@@ -50,7 +52,7 @@ class CommentFragment : Fragment() {
     }
 
     private fun observeViewModels(){
-        commentViewModel.comments.observe(viewLifecycleOwner, Observer{ comments ->
+        commentViewModel.comments.observe(viewLifecycleOwner, Observer { comments ->
             commentAdapter.newDataSet(comments)
         })
     }
