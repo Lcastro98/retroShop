@@ -19,4 +19,5 @@
     <string name="product_title">Nuestros Productos</string>
     <string name="comment_title">Comentarios</string>
     <string name="profile_title">Mi Perfil</string>
+    <string name="product_detail_title">Detalle del Producto</string>
 </resources>

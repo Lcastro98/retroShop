@@ -6,12 +6,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.misionTIC.retroshop.databinding.ItemCommentBinding
 
-class CommentAdapter(var items: List<Comment>): RecyclerView.Adapter<CommentAdapter.ViewHolder>() {
-    class ViewHolder(var item: ItemCommentBinding): RecyclerView.ViewHolder(item.root)
+class CommentAdapter(var items: List<Comment>): RecyclerView.Adapter<CommentAdapter.ViewHolder>(){
+    class ViewHolder(val item: ItemCommentBinding): RecyclerView.ViewHolder(item.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
-            ItemCommentBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemCommentBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         )
     }
 
@@ -25,5 +25,10 @@ class CommentAdapter(var items: List<Comment>): RecyclerView.Adapter<CommentAdap
 
     override fun getItemCount(): Int {
         return items.size
+    }
+
+    fun newDataSet(newData: List<Comment>){
+        items = newData
+        notifyDataSetChanged()
     }
 }

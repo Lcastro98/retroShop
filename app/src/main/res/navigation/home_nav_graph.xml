@@ -14,7 +14,11 @@
         android:id="@+id/productFragment"
         android:name="com.misionTIC.retroshop.ui.fragments.ProductFragment"
         android:label="@string/product_title"
-        tools:layout="@layout/fragment_product" />
+        tools:layout="@layout/fragment_product" >
+        <action
+            android:id="@+id/action_productFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.misionTIC.retroshop.ui.fragments.ProfileFragment"
@@ -24,4 +28,9 @@
         android:id="@+id/commentFragment"
         android:name="com.misionTIC.retroshop.ui.fragments.CommentFragment"
         android:label="@string/comment_title" />
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.misionTIC.retroshop.ui.fragments.ProductDetailFragment"
+        android:label="@string/product_detail_title"
+        tools:layout="@layout/fragment_product_detail" />
 </navigation>
