@@ -12,7 +12,6 @@ import com.misionTIC.retroshop.R
 import com.misionTIC.retroshop.databinding.FragmentCommentBinding
 import com.misionTIC.retroshop.ui.adapters.CommentAdapter
 import com.misionTIC.retroshop.ui.viewmodels.CommentViewModel
-import com.misionTIC.retroshop.ui.listeners.OnProductListener
 import com.misionTIC.retroshop.data.models.Comment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

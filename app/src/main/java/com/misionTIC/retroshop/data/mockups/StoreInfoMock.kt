@@ -7,9 +7,11 @@ class StoreInfoMock {
         return StoreInfo(
             "1",
             "RetroShop",
-            "https://ingreseunadireccion.com",
+            "",
             "Cra. tal # tal - tal",
-            "Vendemos algo"
+            "Nuestros contactos: +57 300 XXX XXXX 01 8000 23 53",
+            "Nacimos en 2015 con el propósito de llevar lo que tu deseas a tu hogar"
+
         )
     }
 }

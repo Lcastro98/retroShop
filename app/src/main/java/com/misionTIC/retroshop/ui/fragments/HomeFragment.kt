@@ -41,8 +41,9 @@ class HomeFragment : Fragment() {
     private fun observeViewModels(){
         storeViewModel.info.observe(viewLifecycleOwner, Observer{ info ->
             binding.home.text = info.name
-            binding.homeDescription.text = info.address
             binding.homeHistory.text = info.description
+            binding.homeContact.text = info.contact
+            binding.homeDirection.text = info.address
             Glide.with(binding.root).load(info.image).into(binding.homeImage)
         })
     }
