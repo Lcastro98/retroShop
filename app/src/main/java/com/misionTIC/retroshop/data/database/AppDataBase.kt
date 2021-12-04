@@ -1,6 +1,8 @@
 package com.misionTIC.retroshop.data.database
 
+import android.content.Context
 import androidx.room.Database
+import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.misionTIC.retroshop.data.database.dao.CommentDao
 import com.misionTIC.retroshop.data.database.dao.ProductDao
@@ -15,4 +17,18 @@ abstract class AppDataBase: RoomDatabase () {
     abstract fun productDao(): ProductDao
     abstract fun storeDao(): StoreDao
 
+    companion object {
+        @Volatile
+        private var instance: AppDataBase? = null
+
+        fun getInstance(context: Context): AppDataBase{
+            if(instance == null){
+                synchronized(this){
+                    instance = Room.databaseBuilder(context.applicationContext,AppDataBase::class.java,"retroShop").build()
+
+                }
+            }
+            return instance!!
+        }
+    }
 }
