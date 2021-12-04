@@ -5,10 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.misionTIC.retroshop.R
 import com.misionTIC.retroshop.databinding.FragmentCommentBinding
 import com.misionTIC.retroshop.ui.adapters.CommentAdapter
 import com.misionTIC.retroshop.ui.viewmodels.CommentViewModel
