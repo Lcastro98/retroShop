@@ -3,7 +3,7 @@ package com.misionTIC.retroshop.data.models
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName= "product")
+@Entity(tableName= "products")
 data class Product(
     @PrimaryKey var id: String ="",
     var name: String?,

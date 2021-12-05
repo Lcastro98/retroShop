@@ -6,7 +6,7 @@ import com.misionTIC.retroshop.data.repositories.StoreRepository
 import org.koin.dsl.module
 
 val repoModule = module {
-    single { StoreRepository(get()) }
-    single { CommentRepository(get())}
-    single { ProductRepository(get())}
+    single { StoreRepository(get(),get()) }
+    single { CommentRepository(get(),get())}
+    single { ProductRepository(get(),get())}
 }

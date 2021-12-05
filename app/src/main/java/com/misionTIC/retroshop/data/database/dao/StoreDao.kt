@@ -12,6 +12,6 @@ interface StoreDao {
     @Insert
     suspend fun insertStore(store: StoreInfo)
 
-    @Query("SELECT * FROM Stores LIMIT 1")
+    @Query("SELECT * FROM stores LIMIT 1")
     suspend fun getStore(): StoreInfo?
 }
