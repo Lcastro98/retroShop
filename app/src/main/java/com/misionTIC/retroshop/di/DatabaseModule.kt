@@ -7,7 +7,6 @@ val databaseModule= module {
     single { AppDataBase.getInstance(get()) }
     single {get<AppDataBase>().productDao()}
     single {get<AppDataBase>().commentDao()}
-
     single {get<AppDataBase>().storeDao()}
 
 }

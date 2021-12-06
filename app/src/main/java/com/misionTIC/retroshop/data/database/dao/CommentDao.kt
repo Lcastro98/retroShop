@@ -8,8 +8,8 @@ import com.misionTIC.retroshop.data.models.Comment
 @Dao
 interface CommentDao {
     @Insert
-    suspend fun insertComments(comments: List<Comment>)
+     suspend fun insertComments(comments: List<Comment>)
 
-    @Query("SELECT id FROM comments")
-    suspend fun getAllComments(): List<Comment>
+    @Query("SELECT * FROM comments")
+    fun getAllComments(): List<Comment>
 }
