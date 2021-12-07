@@ -10,7 +10,7 @@ import com.misionTIC.retroshop.data.models.StoreInfo
 interface StoreDao {
 
     @Insert
-    suspend fun insertStore(store: StoreInfo)
+     fun insertStore(store: StoreInfo)
 
     @Query("SELECT * FROM stores LIMIT 1")
      fun getStore(): StoreInfo?

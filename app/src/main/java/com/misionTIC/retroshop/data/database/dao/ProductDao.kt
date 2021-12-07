@@ -8,7 +8,7 @@ import com.misionTIC.retroshop.data.models.Product
 @Dao
 interface ProductDao {
     @Insert
-    suspend fun insertProducts(products: List<Product>)
+     fun insertProducts(products: List<Product>)
 
     @Query ("SELECT * FROM products")
      fun getAllProducts(): List<Product>
