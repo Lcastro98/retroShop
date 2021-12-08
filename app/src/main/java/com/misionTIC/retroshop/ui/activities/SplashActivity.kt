@@ -4,10 +4,12 @@ import android.animation.Animator
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.lifecycle.Observer
 import com.misionTIC.retroshop.data.models.Comment
 import com.misionTIC.retroshop.data.models.Product
 import com.misionTIC.retroshop.data.models.StoreInfo
 import com.misionTIC.retroshop.databinding.ActivitySplashBinding
+import com.misionTIC.retroshop.ui.viewmodels.LoginViewModel
 import com.misionTIC.retroshop.ui.viewmodels.SplashViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -15,6 +17,7 @@ class SplashActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySplashBinding
     private val splashViewModel: SplashViewModel by viewModel()
+    private val loginViewModel: LoginViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +28,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun init(){
+        loginViewModel.loggedIn()
         splashViewModel.loadinformation(
             StoreInfo(
                 "1",
@@ -63,6 +67,16 @@ class SplashActivity : AppCompatActivity() {
             }
 
             override fun onAnimationEnd(p0: Animator?) {
+                loginViewModel.user.observe(this@SplashActivity, Observer { user ->
+                    if(user != null) {
+                        val intent = Intent(applicationContext, MainActivity::class.java)
+                        startActivity(intent)
+                    } else {
+                        val intent = Intent(applicationContext, HomeActivity::class.java)
+                        startActivity(intent)
+                    }
+                    finish()
+                } )
                 val intent = Intent(applicationContext, MainActivity::class.java)
                 startActivity(intent)
                 finish()

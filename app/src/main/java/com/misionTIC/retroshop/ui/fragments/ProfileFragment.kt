@@ -11,10 +11,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.PermissionChecker.checkPermission
+import androidx.lifecycle.Observer
 import com.misionTIC.retroshop.databinding.FragmentProfileBinding
+import com.misionTIC.retroshop.ui.activities.HomeActivity
+import com.misionTIC.retroshop.ui.activities.MainActivity
+import com.misionTIC.retroshop.ui.viewmodels.LoginViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 /**
@@ -26,6 +32,7 @@ class ProfileFragment : Fragment() {
 
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
+    private val loginViewModel: LoginViewModel by viewModel()
 
     private val REQUEST_CAMERA_PERMISSION = 1
     private val REQUEST_IMAGE = 2
@@ -42,6 +49,8 @@ class ProfileFragment : Fragment() {
     override fun onStart(){
         super.onStart()
         checkPermission()
+        observeViewModels()
+        loginViewModel.loggedIn()
 
         binding.profileImage.setOnClickListener{
             if(ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED)
@@ -53,6 +62,10 @@ class ProfileFragment : Fragment() {
 
                     }
                 }
+        }
+
+        binding.profileLogOut.setOnClickListener{
+            loginViewModel.logOut()
         }
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?){
@@ -68,4 +81,15 @@ class ProfileFragment : Fragment() {
             ActivityCompat.requestPermissions(requireActivity(), arrayOf(Manifest.permission.CAMERA), REQUEST_CAMERA_PERMISSION)
     }
 
+    private fun observeViewModels(){
+        loginViewModel.user.observe(viewLifecycleOwner, Observer { user ->
+            if(user != null ){
+                binding.profileName.text = user!!.displayName
+            } else {
+                val intent = Intent(requireContext(), MainActivity::class.java)
+                startActivity(intent)
+                requireActivity().finish()
+            }
+        })
+    }
 }

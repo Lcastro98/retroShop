@@ -30,7 +30,7 @@
         app:layout_constraintBottom_toTopOf="@+id/profile_log_out"
         app:layout_constraintTop_toBottomOf="@id/profile_image"
         android:layout_marginVertical="4dp"
-        tools:text="usuario prueba"
+        android:text="usuario prueba"
         android:fontFamily="@font/lato"/>
 
     <Button
