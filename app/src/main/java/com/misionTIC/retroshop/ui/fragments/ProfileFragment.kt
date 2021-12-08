@@ -44,7 +44,7 @@ class ProfileFragment : Fragment() {
         checkPermission()
 
         binding.profileImage.setOnClickListener{
-            if(ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED)
+            if(ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED)
                 Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { intent ->
                     try{
                         startActivityForResult(intent,REQUEST_IMAGE)
