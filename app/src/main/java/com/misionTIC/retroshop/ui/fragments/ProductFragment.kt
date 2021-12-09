@@ -47,9 +47,12 @@ class ProductFragment : Fragment() {
         productAdapter = ProductAdapter(
             listOf()
         )
+        binding.productRefresh.setOnRefreshListener {
+            productViewModel.loadProducts()
+        }
         productAdapter.listener = object: OnProductListener {
             override fun onClick(item: Product){
-                Log.d("PRODUCT", item.name)
+                Log.d("PRODUCT", item.name!!)
                 productViewModel.selectProduct(item)
                 findNavController().navigate(R.id.action_productFragment_to_productDetailFragment)
             }
@@ -66,6 +69,7 @@ class ProductFragment : Fragment() {
     private fun observeViewModels(){
         productViewModel.products.observe(viewLifecycleOwner, Observer{ products ->
             productAdapter.newDataSet(products)
+            binding.productRefresh.isRefreshing = false
         })
     }
 }

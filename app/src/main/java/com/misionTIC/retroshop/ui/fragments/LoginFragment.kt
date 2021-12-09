@@ -6,9 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.lifecycle.Observer
 import com.misionTIC.retroshop.databinding.FragmentLoginBinding
 import com.misionTIC.retroshop.isValidEmail
 import com.misionTIC.retroshop.ui.activities.HomeActivity
+import com.misionTIC.retroshop.ui.viewmodels.LoginViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 /**
  * A simple [Fragment] subclass.
@@ -23,6 +27,8 @@ class LoginFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
+    private val loginViewModel: LoginViewModel by viewModel()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,6 +40,7 @@ class LoginFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
+        observeViewModels()
         binding.buttonLogin.setOnClickListener {
             var isValid = true
 
@@ -52,10 +59,19 @@ class LoginFragment : Fragment() {
             }
 
             if (isValid) {
+                loginViewModel.login(binding.loginEmail.text.toString(), binding.loginPassword.text.toString())
+            }
+        }
+    }
+    private fun observeViewModels(){
+        loginViewModel.user.observe(viewLifecycleOwner, Observer { user ->
+            if(user != null ){
                 val intent = Intent(requireContext(), HomeActivity::class.java)
                 startActivity(intent)
             }
-        }
-
+        })
+        loginViewModel.error.observe(viewLifecycleOwner, Observer { message ->
+            Toast.makeText(requireContext(),message, Toast.LENGTH_LONG).show()
+        })
     }
 }

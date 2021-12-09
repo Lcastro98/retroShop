@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "332067013648",
+    "project_id": "retroshop-c109f",
+    "storage_bucket": "retroshop-c109f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332067013648:android:bcf93928d3abb58aebb695",
+        "android_client_info": {
+          "package_name": "com.misionTIC.retroshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "332067013648-usedldc946o60qt6qeep5v2gfb7is63r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXsbPuvVwtbYBL7fJ453XwCLpUjE_f4kE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "332067013648-usedldc946o60qt6qeep5v2gfb7is63r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
