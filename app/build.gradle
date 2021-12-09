@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'com.google.gms.google-services'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 }
 
 android {
@@ -84,10 +85,19 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore-ktx:23.0.3'
     implementation 'com.google.firebase:firebase-storage-ktx:20.0.0'
 
+    // For Maps
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+
+    // Maps SDK for Android KTX Library
+    implementation 'com.google.maps.android:maps-ktx:3.0.0'
+
     //For lottie
     implementation 'com.airbnb.android:lottie:4.2.2'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}
+secrets {
+    defaultPropertiesFileName = 'local.properties'
 }
