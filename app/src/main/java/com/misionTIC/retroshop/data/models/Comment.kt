@@ -12,4 +12,7 @@ data class Comment(
     var author: String? = "",
     var image: String? = "",
     var date: String? = ""
-)
+){
+    constructor(): this("","","","",""){}
+
+}

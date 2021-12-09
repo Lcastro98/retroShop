@@ -16,6 +16,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.PermissionChecker.checkPermission
 import androidx.lifecycle.Observer
+import com.bumptech.glide.Glide
 import com.misionTIC.retroshop.databinding.FragmentProfileBinding
 import com.misionTIC.retroshop.ui.activities.HomeActivity
 import com.misionTIC.retroshop.ui.activities.MainActivity
@@ -70,9 +71,10 @@ class ProfileFragment : Fragment() {
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?){
         if(resultCode == Activity.RESULT_OK){
-            if(requestCode== REQUEST_IMAGE){
-              val bitmap =  data?.extras?.get("data") as Bitmap
-                binding.profileImage.setImageBitmap(bitmap)
+            if(requestCode== REQUEST_IMAGE) {
+                val bitmap = data?.extras?.get("data") as Bitmap
+                // binding.profileImage.setImageBitmap(bitmap)
+                loginViewModel.uploadImage(bitmap)
             }
         }
     }
@@ -85,6 +87,9 @@ class ProfileFragment : Fragment() {
         loginViewModel.user.observe(viewLifecycleOwner, Observer { user ->
             if(user != null ){
                 binding.profileName.text = user!!.displayName
+                if(user.photoUrl != null){
+                    Glide.with(binding.root).load(user.photoUrl).into(binding.profileImage)
+                }
             } else {
                 val intent = Intent(requireContext(), MainActivity::class.java)
                 startActivity(intent)
