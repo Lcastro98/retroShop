@@ -11,7 +11,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 
-class ProductRepository(private val dataSource: ProductMock, private val dataSourceDb: ProductDao,
+class ProductRepository(private val dataSourceDb: ProductDao,
     private val dataSourceFirebase: FirebaseFirestore) {
     val db: CollectionReference =  dataSourceFirebase.collection(Constants.PRODUCT_COLLECTION)
     suspend fun loadProducts(): List<Product>{

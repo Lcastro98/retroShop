@@ -91,6 +91,16 @@ dependencies {
     // Maps SDK for Android KTX Library
     implementation 'com.google.maps.android:maps-ktx:3.0.0'
 
+    // For OSM
+    implementation 'org.osmdroid:osmdroid-android:6.1.11'
+
+    // Lifecycle Runtime KTX Library
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
+
+    // For Android preferences
+    implementation 'androidx.preference:preference-ktx:1.0.0'
+
+
     //For lottie
     implementation 'com.airbnb.android:lottie:4.2.2'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'

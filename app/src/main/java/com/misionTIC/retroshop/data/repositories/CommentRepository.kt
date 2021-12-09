@@ -10,7 +10,7 @@ import kotlinx.coroutines.*
 import kotlinx.coroutines.tasks.await
 
 
-class CommentRepository(val dataSource: CommentMock, private val dataSourceDb: CommentDao,
+class CommentRepository(private val dataSourceDb: CommentDao,
     private val dataSourceFirebase: FirebaseFirestore) {
     val db: CollectionReference =  dataSourceFirebase.collection(Constants.COMMENT_COLLECTION)
     suspend fun loadComments(): List<Comment> {

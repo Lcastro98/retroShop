@@ -11,7 +11,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 
-class StoreRepository (private val dataSource: StoreInfoMock, private val dataSourceDb: StoreDao,
+class StoreRepository (private val dataSourceDb: StoreDao,
     private val dataSourceFirebase: FirebaseFirestore){
     val db: CollectionReference =  dataSourceFirebase.collection(Constants.STORE_COLLECTION)
     suspend fun loadInfo(): StoreInfo? {
